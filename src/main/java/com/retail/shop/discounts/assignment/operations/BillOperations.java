@@ -13,8 +13,6 @@ public interface BillOperations {
 
 	public Double userTypeDiscountApply(Double cost);
 
-	public Double totalBillDiscountApply(Double cost);
-
 	Double getGroceriedItemCost(List<ItemsInStore> itemList);
 
 	Double collectPurchasedItems(List<ItemsInStore> itemList);

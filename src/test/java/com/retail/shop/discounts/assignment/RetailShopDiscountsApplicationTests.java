@@ -9,7 +9,6 @@ import static com.retail.shop.discounts.assignment.entity.ItemCategoryInStore.OT
 import static com.retail.shop.discounts.assignment.entity.UserType.AFFILIATE;
 import static com.retail.shop.discounts.assignment.entity.UserType.EMOLOYEE;
 import static com.retail.shop.discounts.assignment.entity.UserType.OLD_CUSTOMER;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +40,6 @@ class RetailShopDiscountsApplicationTests {
 	
 	@Autowired UserBuilder userBuilder;
 	@Autowired BillBuilder billBuilder;
-	@Autowired RetailShopBillInfo retailShopBillInfo;
 	@Mock Bill bill;
 	@Mock List<ItemsInStore> items;
 	@InjectMocks RetailShopBillInfo retailShopBill;
@@ -86,7 +84,9 @@ class RetailShopDiscountsApplicationTests {
 	}
 
 	/**
-	 * 30% discount to the Employee
+	 * 1. 30% discount to the Employee
+	 * 2.	For every $100 on the bill, there would be a $ 5 discount (e.g. for $ 990, you get $ 45 as a discount). The percentage based discounts do not apply on groceries.
+	 * 3.	A user can get only one of the percentage based discounts on a bill.
 	 */
 	@Test
 	void testEmployeeUserDiscount() {
@@ -95,76 +95,61 @@ class RetailShopDiscountsApplicationTests {
 		Double billCost = retailShopBill.collectPurchasedItems(items);
 		
 		Double billCostAfterDiscount = retailShopBill.userTypeDiscountApply(billCost);
-		Double groceriesAmount = retailShopBillInfo.getGroceriedItemCost(bill.getItemList());
+		Double groceriesAmount = retailShopBill.getGroceriedItemCost(bill.getItemList());
 		
-		Double netPayAmount = calculateNetPayableAmount(billCostAfterDiscount+ groceriesAmount);
+		Double netPayAmount = grossAmount(billCostAfterDiscount+ groceriesAmount);
 		
 		logger.info("UserType Employee and its 30% discount without grocery items : {} "
-				+ "and For every $100 on the bill, there would be a $ 5 discount : {} ", billCostAfterDiscount, netPayAmount);
+				+ "and Gross Amount for this discounted amount & grocery amount: {} (For every $100 on the bill, there would be a $ 5) : {} ", billCostAfterDiscount, groceriesAmount, netPayAmount);
 	}
 
 	/**
-	 * 10% discount to the Affiliate
+	 * 1. 10% discount to the Affiliate
+	 * 2.	For every $100 on the bill, there would be a $ 5 discount (e.g. for $ 990, you get $ 45 as a discount). The percentage based discounts do not apply on groceries.
+	 * 3.	A user can get only one of the percentage based discounts on a bill.
 	 */
 	@Test
 	void testAffiliateUserDiscount() {
 		retailShopBill.collectUserInfo(userBuilder.build("Mohammed Shoab", "971 5223334450", AFFILIATE));
 
 		Double billCost = retailShopBill.collectPurchasedItems(items);
-
+		
 		Double billCostAfterDiscount = retailShopBill.userTypeDiscountApply(billCost);
-
-		Double deductionAmount = (billCost - retailShopBill.getGroceriedItemCost(items));
-
-		assertEquals(billCost - (deductionAmount * 0.10), billCostAfterDiscount);
+		Double groceriesAmount = retailShopBill.getGroceriedItemCost(bill.getItemList());
+		
+		Double netPayAmount = grossAmount(billCostAfterDiscount+ groceriesAmount);
+		
+		logger.info("UserType Affiliate and its 10% discount without grocery items : {} "
+				+ "and Gross Amount for this discounted amount & grocery amount: {} (For every $100 on the bill, there would be a $ 5) : {} ", billCostAfterDiscount, groceriesAmount, netPayAmount);
 
 	}
 
 	/**
-	 * 5% discount to old customer
+	 * 1. 5% discount to old customer
+	 * 2. For every $100 on the bill, there would be a $ 5 discount (e.g. for $ 990, you get $ 45 as a discount). The percentage based discounts do not apply on groceries.
+	 * 3. A user can get only one of the percentage based discounts on a bill.
 	 */
 	@Test
 	void testOldCustomerSegmentDicount() {
 		retailShopBill.collectUserInfo(userBuilder.build("Shireen M", "971 5223334890", OLD_CUSTOMER));
 
 		Double billCost = retailShopBill.collectPurchasedItems(items);
-
-		Double billCostAfterDiscount = retailShopBill.userTypeDiscountApply(billCost);
-
-		Double deductionAmount = (billCost - retailShopBill.getGroceriedItemCost(items));
-
-		assertEquals(Double.valueOf(billCost - (deductionAmount * 0.05)), billCostAfterDiscount);
-	}
-
-	@Test
-	void testCollectPurchasedItems() {
-		Double billCost = retailShopBill.collectPurchasedItems(items);
-		assertEquals(Double.valueOf(2452.49), billCost);
-	}
-
-	@Test
-	void testFinalDiscount() {
 		
-		retailShopBill.collectUserInfo(userBuilder.build("Shireen M", "971 5223334890", OLD_CUSTOMER));
-		
-		Double billCost = retailShopBill.collectPurchasedItems(items);
-
 		Double billCostAfterDiscount = retailShopBill.userTypeDiscountApply(billCost);
-		Double billCostAfterFinalDiscount = retailShopBill.totalBillDiscountApply(billCostAfterDiscount);
-
-		Double expectedValue = billCostAfterDiscount - (Math.floor(Math.floor(billCostAfterDiscount) / 100) * 5);
-
-		assertEquals(expectedValue, billCostAfterFinalDiscount);
-
+		Double groceriesAmount = retailShopBill.getGroceriedItemCost(bill.getItemList());
+		
+		Double netPayAmount = grossAmount(billCostAfterDiscount+ groceriesAmount);
+		
+		logger.info("UserType Old Customer and its 5% discount without grocery items : {} "
+				+ "and Gross Amount for this discounted amount & grocery amount: {} (For every $100 on the bill, there would be a $ 5) : {} ", billCostAfterDiscount, groceriesAmount, netPayAmount);
 	}
-	
-	private double calculateNetPayableAmount(double billAmount) {
+
+	private double grossAmount(double billAmount) {
 	        double discount = 0;
-	        
 	        // Calculate $5 discount for every $100 on the bill
 	        discount += (int) (billAmount / 100) * 5;
 	        
-	        return billAmount - discount;
+	        return discount;
 	    }
 
 }

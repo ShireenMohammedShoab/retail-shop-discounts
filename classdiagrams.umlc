@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<umlmark-class version="0.8.1" icons="true" image-type="JPEG" show-relationships="true" generalizations="true" 
-  realizations="true" associations="true" dependencies="false" nesting-rel="true" router="FAN">  
+<umlmark-class version="0.8.1" icons="true" show-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-rel="true" router="FAN">  
   <class id="1" language="java" name="com.retail.shop.discounts.assignment.RetailShopDiscountsApplication" 
     project="retail-shop-discounts" 
     file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/RetailShopDiscountsApplication.java" 
@@ -12,43 +12,43 @@
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.retail.shop.discounts.assignment.entity.Bill.BillBuilder" 
+  <enumeration id="2" language="java" name="com.retail.shop.discounts.assignment.entity.UserType" 
     project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/Bill.java" binary="false" 
+    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/UserType.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="116" width="376" x="1237" y="985"/>    
-    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
-      accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
-      <operations public="true" package="true" protected="true" private="true" static="false"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="com.retail.shop.discounts.assignment.entity.Bill" project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/Bill.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="336" width="394" x="801" y="609"/>    
-    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
-      accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
-      <operations public="true" package="true" protected="true" private="true" static="false"/>    
-    </display>  
-  </class>  
-  <enumeration id="4" language="java" name="com.retail.shop.discounts.assignment.entity.ItemCategoryInStore" 
-    project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/ItemCategoryInStore.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="284" x="901" y="1281"/>    
+    <position height="176" width="284" x="41" y="945"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </enumeration>  
-  <class id="5" language="java" name="com.retail.shop.discounts.assignment.entity.ItemsInStore" 
+  <class id="3" language="java" name="com.retail.shop.discounts.assignment.entity.Bill.BillBuilder" 
+    project="retail-shop-discounts" 
+    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/Bill.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="116" width="376" x="1237" y="945"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.retail.shop.discounts.assignment.entity.ItemsInStore" 
     project="retail-shop-discounts" 
     file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/ItemsInStore.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="256" width="296" x="901" y="985"/>    
+    <position height="256" width="296" x="901" y="945"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.retail.shop.discounts.assignment.entity.Bill" project="retail-shop-discounts" 
+    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/Bill.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="336" width="394" x="801" y="569"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -58,7 +58,7 @@
   <class id="6" language="java" name="com.retail.shop.discounts.assignment.entity.User" project="retail-shop-discounts" 
     file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/User.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="256" width="284" x="456" y="609"/>    
+    <position height="256" width="284" x="41" y="569"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -69,160 +69,160 @@
     project="retail-shop-discounts" 
     file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/User.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="116" width="284" x="577" y="985"/>    
+    <position height="116" width="284" x="577" y="945"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </class>  
-  <enumeration id="8" language="java" name="com.retail.shop.discounts.assignment.entity.UserType" 
+  <enumeration id="8" language="java" name="com.retail.shop.discounts.assignment.entity.ItemCategoryInStore" 
     project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/UserType.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="176" width="284" x="253" y="985"/>    
+    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/entity/ItemCategoryInStore.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="96" width="284" x="901" y="1241"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </enumeration>  
-  <interface id="9" language="java" name="com.retail.shop.discounts.assignment.operations.BillOperations" 
+  <class id="9" language="java" name="com.retail.shop.discounts.assignment.operations.RetailShopBillInfo" 
+    project="retail-shop-discounts" 
+    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/operations/RetailShopBillInfo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="375" x="365" y="333"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="com.retail.shop.discounts.assignment.operations.BillOperations" 
     project="retail-shop-discounts" 
     file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/operations/BillOperations.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="375" x="41" y="609"/>    
+    <position height="156" width="375" x="365" y="569"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </interface>  
-  <class id="10" language="java" name="com.retail.shop.discounts.assignment.operations.RetailShopBillInfo" 
+  <class id="11" language="java" name="com.retail.shop.discounts.assignment.RetailShopDiscountsApplicationTests" 
     project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/main/java/com/retail/shop/discounts/assignment/operations/RetailShopBillInfo.java" 
+    file="/retail-shop-discounts/src/test/java/com/retail/shop/discounts/assignment/RetailShopDiscountsApplicationTests.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="375" x="365" y="353"/>    
+    <position height="256" width="437" x="801" y="37"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="com.retail.shop.discounts.assignment.RetailShopDiscountsApplicationTests" 
-    project="retail-shop-discounts" 
-    file="/retail-shop-discounts/src/test/java/com/retail/shop/discounts/assignment/RetailShopDiscountsApplicationTests.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="276" width="437" x="801" y="37"/>    
-    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
-      accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
   <association id="12">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="13" name="category"/>      
+    <bendpoint x="1246" y="333"/>    
+    <bendpoint x="1246" y="569"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="13" name="billBuilder"/>      
       <multiplicity id="14" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="15">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="16" name="retailShopBill"/>      
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="16" name="userType"/>      
       <multiplicity id="17" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="18">    
-    <bendpoint x="770" y="353"/>    
-    <bendpoint x="770" y="609"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="19" name="userBuilder"/>      
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="19" name="category"/>      
       <multiplicity id="20" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <nesting id="21">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="7"/>  
   </nesting>  
-  <realization id="22">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
+  <nesting id="22">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </nesting>  
   <association id="23">    
-    <bendpoint x="1225" y="353"/>    
-    <bendpoint x="1225" y="609"/>    
+    <bendpoint x="810" y="333"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="24" name="items"/>      
-      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+      <attribute id="24" name="bill"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="26">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="27" name="userType"/>      
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="27" name="bill"/>      
       <multiplicity id="28" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="29">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </nesting>  
-  <association id="30">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="31" name="itemList"/>      
-      <multiplicity id="32" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="33">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="34" name="user"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
+  <association id="29">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="30" name="retailShopBill"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <bendpoint x="770" y="333"/>    
+    <bendpoint x="770" y="569"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="33" name="userBuilder"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <bendpoint x="1225" y="333"/>    
+    <bendpoint x="1225" y="569"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="36" name="items"/>      
+      <multiplicity id="37" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="39" name="itemList"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="42" name="user"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="36">    
-    <bendpoint x="1246" y="353"/>    
-    <bendpoint x="1246" y="609"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="37" name="billBuilder"/>      
-      <multiplicity id="38" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="39">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="40" name="bill"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="42">    
-    <bendpoint x="810" y="353"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="43" name="bill"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <realization id="44">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
   <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
     sort="true" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="false"/>    
-    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+    <operations public="true" package="true" protected="true" private="true" static="false"/>  
   </classifier-attribute>  
   <association-attribute labels="true" multiplicity="true"/>
 </umlmark-class>

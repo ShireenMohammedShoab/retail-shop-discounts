@@ -6,7 +6,6 @@ package com.retail.shop.discounts.assignment.operations;
 import static com.retail.shop.discounts.assignment.entity.ItemCategoryInStore.GROCERIES;
 
 import java.util.List;
-import java.util.stream.IntStream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -99,26 +98,6 @@ public class RetailShopBillInfo implements BillOperations {
 		logger.info("Total Bill Amount After User Type Discount including groceries amount is on bill: {} " , bill.getTotalBillAfterUserTypeDiscountOnBill() + groceriesAmount);
 		
 		return bill.getTotalBillAfterUserTypeDiscountOnBill();
-	}
-
-	/*
-	 * This method used to calculate final discount on bill "For every $100 on the bill, there would be a 
-	 * $5 discount (e.g. for $990, you get $45 as a discount).
-	 * 
-	 * @param billCost after apply first discount for user type
-	 * @return final bill amount after apply discount
-	 */
-	@Override
-	public Double totalBillDiscountApply(Double billCost) {
-		logger.info("Bill Amount Before Final Discount is : {} " , billCost);
-		double finalBillCost = IntStream.range(0, (int) Math.floor(billCost / 100))
-		                                 .mapToDouble(i -> 5.0)
-		                                 .sum();
-
-		double finalBillCostAfterDiscount = billCost - finalBillCost;
-		logger.info("Bill Amount After Final Discount is : {} " , finalBillCostAfterDiscount);
-
-		return finalBillCostAfterDiscount;
 	}
 
 	/*
